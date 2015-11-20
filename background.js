@@ -11,8 +11,10 @@ div.setAttribute('style', 'position: fixed;' +
     'border-radius: 3px;' +
     'color: white;' + 
     'cursor: pointer;' +
-    'font-weight: bold'
+    'font-weight: bold;' +
+    'display: none;'
     );
+
 div.addEventListener("click", function () {
 	var scrollDuration = 1000;
 	var scrollStep = -window.scrollY / (scrollDuration/15), 
@@ -23,4 +25,13 @@ div.addEventListener("click", function () {
 			else clearInterval(scrollInterval);
 		}, 15);
 });
+
+window.onscroll = function(event) {
+	if(window.scrollY > 500) {
+		div.style.display = "block";
+	} else {
+		div.style.display = "none";
+	}
+}
+
 document.getElementsByTagName("body")[0].appendChild(div);
