@@ -13,7 +13,14 @@ div.setAttribute('style', 'position: fixed;' +
     'cursor: pointer;' +
     'font-weight: bold'
     );
-div.addEventListener("click", function(){
-	window.scrollTo(0,0);
+div.addEventListener("click", function () {
+	var scrollDuration = 1000;
+	var scrollStep = -window.scrollY / (scrollDuration/15), 
+		scrollInterval = setInterval(function() {
+			if(window.scrollY!=0){
+				window.scrollBy(0, scrollStep);
+			}
+			else clearInterval(scrollInterval);
+		}, 15);
 });
 document.getElementsByTagName("body")[0].appendChild(div);
