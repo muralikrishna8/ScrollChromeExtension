@@ -13,4 +13,7 @@ div.setAttribute('style', 'position: fixed;' +
     'cursor: pointer;' +
     'font-weight: bold'
     );
+div.addEventListener("click", function(){
+	window.scrollTo(0,0);
+});
 document.getElementsByTagName("body")[0].appendChild(div);
