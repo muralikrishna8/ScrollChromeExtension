@@ -3,8 +3,11 @@
  	"name": "Scroll To Top",
  	"version": "1",
  	"description": "Added a scroll to top div",
-	"content_scripts": [ {
+ 	"icons": {  
+ 		"128":"icon-128.png"
+ 	},
+	"content_scripts": [{
 		"js": ["background.js"],
 		"matches": [ "http://*/*", "https://*/*"]
-		}]
- }
+	}]
+}
