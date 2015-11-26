@@ -1,9 +1,9 @@
 # ScrollChromeExtension  <i class="icon-up-open"></i>
 A simple Chrome extension for scroll to top.
 
--- You can Directly Install the extension using the scrollTop.crx file.
+-- You can Directly Install the extension using the **scrollTop.crx** file, by dragging it onto **chrome://extensions** page
 
-If you made some customisation
+If you make some changes
 ----------
 
 
